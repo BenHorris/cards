@@ -10,46 +10,96 @@
 <body>
 <div class="mt-4 p-5 bg-primary text-white rounded text-center">
   <h1>Jumbotron Example</h1>
-  <p>Lorem ipsum...</p>
+
+
+  <div class="row">
+  <div class="col-sm-3 mb-3 mb-sm-0"></div>
+    <div class="col-sm-6 mb-6 mb-sm-0">  <div class="m-4 p-4 bg-secondary ">
+    <p>{{ scoreboard }}</p>
+    </div>
+  </div>
+    <div class="col-sm-3 mb-3 mb-sm-0">  <img src="{{ url_for('static', filename='gatorade.png') }}" class="card-img-top" alt="..."></div>
+  </div>
+
+
 </div>
 
 <div class="container">
 
 
 <div class="row">
-  <div class="col-sm-3 mb-3 mb-sm-0">
+<div class="col-sm-3 mb-3 mb-sm-0">
+  <div class="card">
+    <img src="{{ url_for('static', filename='1626162.avif') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> {{ players["Kelly Oubre Jr"]["name"] }}</h5>
+      <img src="{{ url_for('static', filename='philly.png') }}" alt="..."> <small>Philadelphia 76ers (#9)</small>
+      <p> Small forward</p>
+      <hr>
+      <ul class="list-unstyled">
+      <li> Points: {{ players["Kelly Oubre Jr"]["points"] }} </li>
+        <li> Rebounds: {{ players["Kelly Oubre Jr"]["rebounds"] }} </li>
+        <li>Assists: {{ players["Kelly Oubre Jr"]["assists"] }} </li>
+        <li> Steals: {{ players["Kelly Oubre Jr"]["steals"] }} </li>
+        <li> Blocks: {{ players["Kelly Oubre Jr"]["blocks"] }} </li>
+      </ul>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-3">
     <div class="card">
-      <img src="{{ url_for('static', filename='1626162.avif') }}" class="card-img-top" alt="...">
+      <img src="{{ url_for('static', filename='goat.jpg') }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title"> {{ players["Lebron James"]["name"] }}</h5>
+        <img src="{{ url_for('static', filename='lakers.png') }}" alt="..."> <small>Los Angeles Lakers (#23)</small>
+        <p> Small forward</p>
+        <hr>
+        <ul class="list-unstyled">
+        <li> Points: {{ players["Lebron James"]["points"] }} </li>
+          <li> Rebounds: {{ players["Lebron James"]["rebounds"] }} </li>
+          <li>Assists: {{ players["Lebron James"]["assists"] }} </li>
+          <li> Steals: {{ players["Lebron James"]["steals"] }} </li>
+          <li> Blocks: {{ players["Lebron James"]["blocks"] }} </li>
+        </ul>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-  </div>
-  <div class="col-sm-3">
+</div>
+<div class="col-sm-3">
     <div class="card">
+      <img src="{{ url_for('static', filename='MJ.jpg') }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">{{ player }}</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title"> {{ players["Michael Jordan"]["name"] }}</h5>
+        <img src="{{ url_for('static', filename='bulls.png') }}" alt="..."> <small>Chicago Bulls (#23)</small>
+        <p> Shooting Guard</p>
+        <hr>
+        <ul class="list-unstyled">
+        <li> Points: {{ players["Michael Jordan"]["points"] }} </li>
+          <li> Rebounds: {{ players["Michael Jordan"]["rebounds"] }} </li>
+          <li>Assists: {{ players["Michael Jordan"]["assists"] }} </li>
+          <li> Steals: {{ players["Michael Jordan"]["steals"] }} </li>
+          <li> Blocks: {{ players["Michael Jordan"]["blocks"] }} </li>
+        </ul>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
-  </div>
-  <div class="col-sm-3">
+</div>
+<div class="col-sm-3">
     <div class="card">
+      <img src="{{ url_for('static', filename='Lonzo.jpg') }}" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title"> {{ players["Lonzo Ball"]["name"] }}</h5>
+        <img src="{{ url_for('static', filename='bulls.png') }}" alt="..."> <small>Chicago Bulls (#2)</small>
+        <p> Point Guard</p>
+        <hr>
+        <ul class="list-unstyled">
+        <li> Points: {{ players["Lonzo Ball"]["points"] }} </li>
+          <li> Rebounds: {{ players["Lonzo Ball"]["rebounds"] }} </li>
+          <li>Assists: {{ players["Lonzo Ball"]["assists"] }} </li>
+          <li> Steals: {{ players["Lonzo Ball"]["steals"] }} </li>
+          <li> Blocks: {{ players["Lonzo Ball"]["blocks"] }} </li>
+        </ul>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
